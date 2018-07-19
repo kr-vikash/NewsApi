@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="ISO-8859-1">
+    <title>Main Page</title>
+</head>
+<body ng-app="demo">
+<hr/>
+<div class="container" ng-controller="UserController">
+    <div class="row">
+        <p>*please fill all the fields</p>
+        <p>example for country, use 'us' for 'United States of America'</p>
+        <label>Keyword</label> <input type="text" ng-model="queryData.keyword" ng-required="queryData.keyword" class="input-sm spacing"/>
+        <label>Country</label> <input type="text" ng-model="queryData.country" ng-required="queryData.country" class="input-sm spacing"
+    />
+        <label>Category Type</label> <input type="text" ng-model="queryData.categoryType" class="input-sm spacing"
+    />
+        <button n ng-click="getNewsData()" class="btn btn-sm btn-info">News Query</button>
+    </div>
+    <hr/>
+    <div class="row">
+        <p>{{allArticle | json}}</p>
+    </div>
+    <hr/>
+    <div class="row" ng-if="allArticle">
+        <span>Keyword:{{qDatas.keyword}}</span></br>
+        <span>Country:{{qDatas.country}}</span></br>
+        <span>Category:{{qDatas.catogoryType}}</span>
+    </div>
+    <hr/>
+
+    <div class="row" ng-if="allArticle" ng-repeat="article in allArticle">
+        <br class="">
+            <h3>Title:-{{article.title}}</h3>
+             <hr/>
+            <span>Description:-{{article.description}}</span></br>
+            <span>Url:-{{article.url}}</span>
+
+        </div>
+    </div>
+    <p ng-if="allArticle.length==0"> nothing found</p>
+    <hr/>
+</div>
+</body>
+<script src="js/lib/angular.min.js"></script>
+<script src="js/lib/ui-bootstrap-tpls-2.5.0.min.js"></script>
+<script src="js/app/app.js"></script>
+<script src="js/app/UserController.js"></script>
+<script src="js/app/UserService.js"></script>
+<link rel="stylesheet" href="css/lib/bootstrap.min.css"/>
+<link rel="stylesheet" href="css/app/app.css"/>
+</html>

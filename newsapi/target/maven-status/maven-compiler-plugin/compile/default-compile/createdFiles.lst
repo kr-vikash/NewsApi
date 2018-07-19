@@ -1,0 +1,9 @@
+com/newsapi/search/modal/Articles.class
+com/newsapi/search/service/NewsData.class
+com/newsapi/search/utils/Constant.class
+com/newsapi/search/NewsApiApplication.class
+com/newsapi/search/service/NewsApiService.class
+com/newsapi/search/controller/NewsApiController.class
+com/newsapi/search/modal/Response.class
+com/newsapi/search/controller/MainController.class
+com/newsapi/search/modal/QueryData.class
