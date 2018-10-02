@@ -1,11 +1,11 @@
-# Wingify-test
+# NewsApi Query
 
-# build docker image, go to newsApi directory and run the commands
+### build docker image from newsApi directory
+```docker build -t news-api .
+```
 
-# docker build -t news-api .
-
-# run command
-
-# docker run --rm -it -p 127.0.0.1:8080:8080 news-api
-
-# localhost:8080/home
+### Execute command
+```docker run --rm -it -p 127.0.0.1:8080:8080 news-api
+```
+###
+localhost:8080/home
